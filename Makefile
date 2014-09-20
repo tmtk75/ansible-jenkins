@@ -13,11 +13,11 @@ natpf:
 
 # Clean up
 clean:
-	rm ssh-config
+	rm -f ssh-config
 clean_natpf:
 	VBoxManage controlvm "ansible-jenkins" natpf1 delete tcp_8080_8080
-distclean: clean clean_natpf
-	rm -rf .e symlink.jenkins
+distclean: clean
+	rm -rf .e symlink.jenkins *.tfstate *.tfplan *.tfstate.backup
 
 ## AWS
 aws-ssh-config: ssh-config.sh
