@@ -5,4 +5,5 @@ symlink.jenkins
 ssh-config
 host_vars
 .e
+bin/*
 
